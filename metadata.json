@@ -1,0 +1,7 @@
+{
+  "name": "Arum's Batik - Traditional Elegance",
+  "description": "An exquisite e-commerce platform for high-quality Indonesian Batik, featuring an AI-powered styling assistant to help you find the perfect pattern for every occasion.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
