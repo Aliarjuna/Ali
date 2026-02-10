@@ -1,0 +1,39 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-[#fdfaf6] text-[#2d241e] antialiased;
+  }
+  
+  h1, h2, h3, .font-serif {
+    @apply font-serif;
+  }
+}
+
+.batik-pattern {
+  background-color: #fdfaf6;
+  background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+}
+
+::selection {
+  @apply bg-[#8b5e34] text-white;
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#fdfaf6];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#8b5e34] rounded-full;
+}
+
+html {
+  scroll-behavior: smooth;
+}

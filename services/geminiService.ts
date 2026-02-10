@@ -2,9 +2,10 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { BATIK_PRODUCTS } from "../constants";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
-
 export const getBatikRecommendation = async (userInput: string) => {
+  // Inisialisasi di dalam fungsi untuk memastikan API_KEY terbaru dari environment selalu terbaca
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+  
   const productContext = BATIK_PRODUCTS.map(p => 
     `ID: ${p.id}, Name: ${p.name}, Desc: ${p.description}, Pattern: ${p.patternOrigin}`
   ).join('\n');
